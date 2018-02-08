@@ -43,8 +43,9 @@ Resources for tutorial on BIDS - Methods Lunch Feb 12
   * fmriprep
   * mriqc
   * in-house apps 
+* Hands-on demo (use pre-built Singularity image)
 
 
-## Compute Canada & KhanLab/autobids (likely no time for this)
+## Compute Canada & KhanLab/autobids
+* likely no time for this
 
-* ...
