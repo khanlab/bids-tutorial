@@ -2,7 +2,7 @@
 Resources for tutorial on BIDS - Methods Lunch Feb 12
 
 
-# Materials:
+##  Materials:
 https://github.com/INCF/bids-starter-kit/wiki
 
 
