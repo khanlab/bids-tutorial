@@ -2,10 +2,15 @@
 Resources for tutorial on BIDS - Methods Lunch Feb 12
 
 
+# Materials:
+https://github.com/INCF/bids-starter-kit/wiki
+
+
 ## Tutorial agenda
 1. What is BIDS
 2. Creating a BIDS dataset
 3. BIDS Apps
+
 
 
 
