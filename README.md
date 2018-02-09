@@ -77,6 +77,9 @@ sudo apt-get install -y squashfs-tools
 ```
 
 ### Getting the cfmm-bids Singularity app
+
+# under construction -- going to revert back to 3 separate singularity tools (and mainly go over tar2bids in the tutorial)
+
 The cfmm-bids singularity app actually contains 3 separate tools that can be run from the command-line.
 
 To download cfmm-bids:
@@ -123,4 +126,5 @@ Usage: tar2bids  <optional flags>  '<{subject} search string>'  <in tar file(s)>
 
 
 Links:
-https://www.singularity-hub.org/collections/585
+* https://github.com/khanlab/cfmm-bids
+* https://www.singularity-hub.org/collections/585
