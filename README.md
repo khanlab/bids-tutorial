@@ -3,15 +3,12 @@ Resources for tutorial on BIDS - Methods Lunch Feb 12
 
 
 ##  Materials:
-https://github.com/INCF/bids-starter-kit/wiki
 
 
 ## Tutorial agenda
 1. What is BIDS
 2. Creating a BIDS dataset
 3. BIDS Apps
-
-
 
 
 ## What is BIDS
@@ -22,7 +19,9 @@ https://github.com/INCF/bids-starter-kit/wiki
 * TSV
 * Other principles: Inheritance, ...
 
-http://bids.neuroimaging.io/
+1. http://bids.neuroimaging.io/
+2. https://github.com/INCF/bids-starter-kit/wiki
+3. https://github.com/INCF/BIDS-examples
 
 ## Creating a BIDS dataset
 
@@ -38,12 +37,12 @@ http://incf.github.io/bids-validator/
 * Heuristic-based conversion with heudiconv
 * Dicom server retrieval
 * Dicom file grabbing
-* Hands-on demo (requires Linux with Singularity for audience)
+* Hands-on demo
 
 
 ## BIDS Apps
 
-* Overall structure (in, out, participant level)
+* Overall structure (input, output, analysis_level)
 * Flexibility --> any programming language!
 * Containers
 * Docker vs Singularity
@@ -51,15 +50,28 @@ http://incf.github.io/bids-validator/
   * fmriprep
   * mriqc
   * in-house apps 
-* Hands-on demo (use pre-built Singularity image)
+* Hands-on demo
 
-http://bids-apps.neuroimaging.io/apps/
 
-Containers:
-https://www.docker.com/
-http://singularity.lbl.gov/
-https://www.singularity-hub.org/
 
+Links
+1. http://bids-apps.neuroimaging.io/apps/
+2. https://www.docker.com/
+3. http://singularity.lbl.gov/
+4. https://www.singularity-hub.org/
+
+### Running bids-app with Singularity:
+
+Download and create a singularity image from docker hub:
+```
+sudo singularity pull docker://poldracklab/fmriprep:1.0.6
+```
+
+To run it:
+```
+singularity run fmriprep-1.0.6.simg
+```
+ 
 ## Compute Canada & KhanLab/autobids - next time!
 
 ## Appendix:
@@ -76,55 +88,44 @@ sudo make install
 sudo apt-get install -y squashfs-tools
 ```
 
-### Getting the cfmm-bids Singularity app
+### Automated bids conversion with tar2bids
 
-# under construction -- going to revert back to 3 separate singularity tools (and mainly go over tar2bids in the tutorial)
-
-The cfmm-bids singularity app actually contains 3 separate tools that can be run from the command-line.
-
-To download cfmm-bids:
+Download the cfmm-bids suite:
 ```
-mkdir ~/bids-tutorial
-cd ~/bids-tutorial
-singularity pull shub://khanlab/cfmm-bids:v0.0.3
-``` 
-
-List apps in cfmm-bids:
+singularity pull shub://khanlab/tar2bids
+singularity pull shub://khanlab/cfmm2tar
+singularity pull shub://khanlab/dicom2tar
 ```
-singularity apps khanlab-cfmm-bids-master-v0.0.3.simg 
-```
-
-Should see that three apps are listed: cfmm2tar, dicom2tar, tar2bids
-You can run these apps with `singularity run -app <name>`:
 
 Run tar2bids:
 ```
-singularity run -app tar2bids khanlab-cfmm-bids-master-v0.0.3.simg
+singularity run khanlab-tar2bids-master-latest.simg
 ```
 
-You should see the usage for tar2bids now:
+You should see the usage for tar2bids:
 ```
 Runs dicom tarball(s) to BIDS conversion using heudiconv
-Usage: tar2bids  <optional flags>  '<{subject} search string>'  <in tar file(s)>
+Usage /opt/tar2bids/tar2bids  <optional flags>   <in tar file(s)>
 
  Optional flags (must appear before required arguments):
+	-P <patient name search string> :  default:  *_{subject}
+	-T <tar name search string> :  uses tarfile name instead of PatientName to search, e.g. '{subject}' if <subject>.tar
 	-o <output_dir> : default=./bids
 	-N <num parallel cores> : default=0  (max cores)
 	-h <heuristic.py> : default=cfmm_bold_rest.py
 	-O "<additional heudiconv options>" : default=
 
  Available heuristic files:
+	cfmm_base.py
+	cfmm_bold_rest.py
+	cfmm_PS_PRC_3T.py
 	EPL14A_GE_3T.py
 	EPL14B_3T.py
 	GEvSE.py
-	cfmm_PS_PRC_3T.py
-	cfmm_base.py
-	cfmm_bold_rest.py
 ```
-
-
 
 
 Links:
 * https://github.com/khanlab/cfmm-bids
 * https://www.singularity-hub.org/collections/585
+* http://nipy.org/workshops/2017-03-boston/lectures/bids-heudiconv/#1
