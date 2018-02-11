@@ -72,8 +72,6 @@ To run it:
 singularity run fmriprep-1.0.6.simg
 ```
  
-## Compute Canada & KhanLab/autobids - next time!
-
 ## Appendix:
 
 ### Installing Singularity:
