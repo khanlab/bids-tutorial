@@ -129,3 +129,6 @@ Links:
 * https://github.com/khanlab/heudiconv (cfmm-specific changes..)
 * https://www.singularity-hub.org/collections/585
 * http://nipy.org/workshops/2017-03-boston/lectures/bids-heudiconv/#1
+
+## Getting Help
+* Join the very active BIDS forum! https://groups.google.com/forum/#!forum/bids-discussion
