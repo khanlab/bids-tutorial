@@ -122,7 +122,9 @@ Usage /opt/tar2bids/tar2bids  <optional flags>   <in tar file(s)>
 ```
 
 Links:
-* https://github.com/khanlab/cfmm-bids
+* https://github.com/khanlab/tar2bids
+* https://github.com/khanlab/cfmm2tar
+* https://github.com/khanlab/dicom2tar
 * https://github.com/nipy/heudiconv
 * https://github.com/khanlab/heudiconv (cfmm-specific changes..)
 * https://www.singularity-hub.org/collections/585
