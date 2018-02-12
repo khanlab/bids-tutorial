@@ -2,9 +2,6 @@
 Resources for tutorial on BIDS - Methods Lunch Feb 12
 
 
-##  Materials:
-
-
 ## Tutorial agenda
 1. What is BIDS
 2. Creating a BIDS dataset
@@ -22,6 +19,7 @@ Resources for tutorial on BIDS - Methods Lunch Feb 12
 1. http://bids.neuroimaging.io/
 2. https://github.com/INCF/bids-starter-kit/wiki
 3. https://github.com/INCF/BIDS-examples
+4.  http://jsoneditoronline.org
 
 ## Creating a BIDS dataset
 
@@ -30,7 +28,9 @@ Resources for tutorial on BIDS - Methods Lunch Feb 12
 * dcm2niix (json support)
 * Hands-on demo 
 
-http://incf.github.io/bids-validator/
+1. http://incf.github.io/bids-validator/
+2. https://www.nitrc.org/projects/dcm2nii/
+3. http://www.mathworks.com/matlabcentral/fileexchange/42997
 
 
 ## BIDS Apps
