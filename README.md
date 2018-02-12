@@ -32,13 +32,6 @@ Resources for tutorial on BIDS - Methods Lunch Feb 12
 
 http://incf.github.io/bids-validator/
 
-## The cfmm-bids tool 
-
-* Heuristic-based conversion with heudiconv
-* Dicom server retrieval
-* Dicom file grabbing
-* Hands-on demo
-
 
 ## BIDS Apps
 
@@ -51,7 +44,6 @@ http://incf.github.io/bids-validator/
   * mriqc
   * in-house apps 
 * Hands-on demo
-
 
 
 Links
@@ -72,7 +64,14 @@ To run it:
 singularity run fmriprep-1.0.6.simg
 ```
  
-## Appendix:
+
+## The cfmm-bids tool 
+
+* Heuristic-based conversion with heudiconv
+* Dicom server retrieval
+* Dicom file grabbing
+* Hands-on demo
+
 
 ### Installing Singularity:
 ```
@@ -121,7 +120,6 @@ Usage /opt/tar2bids/tar2bids  <optional flags>   <in tar file(s)>
 	EPL14B_3T.py
 	GEvSE.py
 ```
-
 
 Links:
 * https://github.com/khanlab/cfmm-bids
